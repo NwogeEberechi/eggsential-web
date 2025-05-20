@@ -43,16 +43,16 @@ const Contact = () => {
               htmlFor="quantity"
               className="block text-xl font-medium text-gray-700 mb-2"
             >
-              How many dozens?
+              How many crates?
             </label>
             <select
               id="quantity"
               className="w-full px-6 py-4 text-xl border border-gray-300 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"
             >
-              <option>1 dozen</option>
-              <option>2 dozens</option>
-              <option>3 dozens</option>
-              <option>4+ dozens</option>
+              <option>100 crates</option>
+              <option>200 crates</option>
+              <option>300 crates</option>
+              <option>400+ crates</option>
             </select>
           </div>
           <div>
