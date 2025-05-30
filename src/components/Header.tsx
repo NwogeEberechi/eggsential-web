@@ -1,11 +1,8 @@
 import React from "react";
 import logo from "../assets/logo.jpg";
+import { whatsappUrl } from "./constants";
+
 const Header = () => {
-  const whatsappNumber = "2349160007184";
-  const message = "Hello! I want to buy eggs";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    message
-  )}`;
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">

@@ -9,13 +9,9 @@ import heroImage from "../assets/hero.png";
 import logo from "../assets/logo.jpg";
 import giftImage from "../assets/gift-bags.jpg";
 import depotImage from "../assets/depot.jpg";
+import { whatsappUrl } from "./constants";
 
 const HeroSection = () => {
-  const whatsappNumber = "2349160007184";
-  const message = "Hello! I want to buy eggs";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    message
-  )}`;
   return (
     <section className="min-h-screen pt-24 pb-16 px-4">
       <div className="max-w-5xl mx-auto">
