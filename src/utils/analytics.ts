@@ -1,6 +1,19 @@
 // Google Analytics Measurement ID
 export const GA_MEASUREMENT_ID = "G-3Q2KQWNZ6V"; // Replace with your actual GA4 Measurement ID
 
+// Declare global types
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
+// Initialize gtag function
+function gtag(...args: any[]) {
+  window.dataLayer.push(args);
+}
+
 // Initialize Google Analytics
 export const initGA = () => {
   if (typeof window !== "undefined") {
@@ -12,9 +25,7 @@ export const initGA = () => {
 
     // Initialize gtag
     window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(arguments);
-    }
+    window.gtag = gtag;
     gtag("js", new Date());
     gtag("config", GA_MEASUREMENT_ID);
   }
@@ -46,8 +57,8 @@ export const trackEvent = (
 };
 
 // Track WhatsApp clicks
-export const trackWhatsAppClick = () => {
-  trackEvent("click", "WhatsApp", "Buy Eggs Button");
+export const trackWhatsAppClick = (entity: string) => {
+  trackEvent("click", "WhatsApp", entity);
 };
 
 // Track phone calls

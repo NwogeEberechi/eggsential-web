@@ -35,7 +35,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"
-                onClick={trackWhatsAppClick}
+                onClick={() => trackWhatsAppClick("Buy Eggs Button - Header")}
               >
                 Buy Eggs
               </a>
