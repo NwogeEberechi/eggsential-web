@@ -9,7 +9,7 @@ import heroImage from "../assets/hero.png";
 import logo from "../assets/logo.jpg";
 import giftImage from "../assets/gift-bags.jpg";
 import depotImage from "../assets/depot.jpg";
-import { whatsappUrl } from "./constants";
+import { BUSINESS_INFO } from "./constants";
 import { trackWhatsAppClick } from "../utils/analytics";
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <a
-              href={whatsappUrl}
+              href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-12 py-6 rounded-full text-2xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"

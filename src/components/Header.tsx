@@ -2,7 +2,7 @@ import React from "react";
 import { BUSINESS_INFO } from "./constants";
 import SEO from "./SEO";
 import { trackWhatsAppClick, trackPhoneCall } from "../utils/analytics";
-import logo from "../assets/logo.jpg";
+import LazyImage from "./LazyImage";
 
 const Header = () => {
   return (
@@ -12,11 +12,11 @@ const Header = () => {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <img
-                // src="https://uploadthingy.s3.us-west-1.amazonaws.com/uHHZkK4yqAyZroPUKE2piY/pasted-image.jpg"
-                src={logo}
+              <LazyImage
+                src="https://uploadthingy.s3.us-west-1.amazonaws.com/uHHZkK4yqAyZroPUKE2piY/pasted-image.jpg"
                 alt={BUSINESS_INFO.name}
                 className="h-12 w-auto"
+                skeletonClassName="h-12 w-12 bg-gray-200 animate-pulse rounded"
               />
               <span className="text-2xl font-bold text-gray-900">
                 {BUSINESS_INFO.name}
