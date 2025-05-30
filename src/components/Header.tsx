@@ -24,17 +24,10 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-4">
               <a
-                href={`tel:${BUSINESS_INFO.phone}`}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-                onClick={trackPhoneCall}
-              >
-                {BUSINESS_INFO.phone}
-              </a>
-              <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-1.5"
                 onClick={() => trackWhatsAppClick("Buy Eggs Button - Header")}
               >
                 Buy Eggs

@@ -34,7 +34,7 @@ const HeroSection = () => {
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-12 py-6 rounded-full text-2xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
+              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-12 py-4 rounded-full text-2xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
               onClick={() =>
                 trackWhatsAppClick("Buy Eggs Button - Hero Section")
               }
