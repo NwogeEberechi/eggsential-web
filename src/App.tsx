@@ -1,14 +1,23 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Analytics from "./components/Analytics";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import WhatsAppButton from "./components/WhatsAppButton";
-export function App() {
+
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <Router>
+      <Analytics />
       <Header />
-      <main>
-        <HeroSection />
-      </main>
-      <WhatsAppButton />
-    </div>
+      <div className="min-h-screen bg-white">
+        <main>
+          <HeroSection />
+        </main>
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
-}
+};
+
+export default App;
