@@ -1,43 +1,156 @@
+import React, { Component } from "react";
+import {
+  PhoneIcon,
+  MapPinIcon,
+  InstagramIcon,
+  FacebookIcon,
+} from "lucide-react";
+import heroImage from "../assets/hero.png";
+import logo from "../assets/logo.jpg";
+import giftImage from "../assets/gift-bags.jpg";
+import depotImage from "../assets/depot.jpg";
+
 const HeroSection = () => {
+  const whatsappNumber = "2349160007184";
+  const message = "Hello! I want to buy eggs";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message
+  )}`;
   return (
-    <section className="pt-32 pb-20 px-4 min-h-[90vh] flex items-center">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-6xl sm:text-7xl font-bold text-gray-900 leading-tight mb-6">
-              Fresh Eggs,
-              <span className="block">
-                Straight from
-                <span className="text-yellow-500"> Our Farm</span>
-              </span>
-            </h1>
-            <p className="text-2xl text-gray-600 mb-8">
-              Laid daily by our happy, free-range hens. Taste the difference of
-              truly fresh eggs.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-full text-xl font-semibold transition-colors"
-              >
-                Order Your Eggs
-              </a>
-              <a
-                href="#learn"
-                className="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-full text-xl font-semibold transition-colors"
-              >
-                Learn More
-              </a>
+    <section className="min-h-screen pt-24 pb-16 px-4">
+      <div className="max-w-5xl mx-auto">
+        {/* Main Content */}
+        <div className="text-center mb-16">
+          <div className="bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full inline-block mb-8 text-lg">
+            Opening June 6th, 2025
+          </div>
+          <h1 className="text-6xl sm:text-7xl font-bold text-gray-900 leading-tight mb-8">
+            Fresh Eggs in Bulk
+            <span className="block mt-4 text-[#FFC107]">At Farm Prices</span>
+          </h1>
+          <p className="text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            We sell farm-fresh eggs in bulk at the best prices in Lagos.
+            Wholesale and retail available.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-12 py-6 rounded-full text-2xl font-semibold transition-all duration-300 inline-flex items-center justify-center gap-3"
+            >
+              Buy Fresh Farm Eggs
+            </a>
+          </div>
+        </div>
+        {/* Image Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="space-y-8">
+            <img
+              // src="https://uploadthingy.s3.us-west-1.amazonaws.com/4EFGo3XSfJP1DFkkUoTCrk/pasted-image.png"
+              src={heroImage}
+              alt="Fresh Eggs Market Promotional"
+              className="w-full rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300"
+            />
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Special Opening Offer
+              </h2>
+              <p className="text-xl text-gray-700 mb-6">
+                Get our exclusive gift bags with bulk orders! Limited time
+                offer.
+              </p>
+              <img
+                // src="https://uploadthingy.s3.us-west-1.amazonaws.com/pzDqo1dZcwFebqXGDS4KK8/pasted-image.jpg"
+                src={giftImage}
+                alt="Free gift bags for bulk buyers"
+                className="w-40 mx-auto rounded-lg shadow-md"
+              />
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute -top-8 -left-8 w-full h-full bg-yellow-200 rounded-3xl -z-10"></div>
+          <div className="space-y-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <img
+                // src="https://uploadthingy.s3.us-west-1.amazonaws.com/uHHZkK4yqAyZroPUKE2piY/pasted-image.jpg"
+                src={logo}
+                alt="Fresh Eggs Logo"
+                className="w-40 mx-auto mb-6"
+              />
+              <p className="text-xl text-gray-700 text-center">
+                Visit our new location at Spring Valley Estate
+              </p>
+            </div>
             <img
-              src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2348&q=80"
-              alt="Fresh farm eggs in a rustic setting"
-              className="rounded-3xl shadow-xl w-full"
+              // src="https://uploadthingy.s3.us-west-1.amazonaws.com/r2owZDNq3PbnoduV3VD1pN/pasted-image.jpg"
+              src={giftImage}
+              alt="Fresh Eggs Market Store"
+              className="w-full rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300"
             />
           </div>
+        </div>
+        {/* Contact Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <a
+            href="tel:+2349160007184"
+            className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center group"
+          >
+            <PhoneIcon className="w-8 h-8 text-[#FFC107] mx-auto mb-4 transform group-hover:scale-110 transition-transform" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Call Us
+            </h3>
+            <p className="text-lg text-gray-600">+234 916 000 7184</p>
+          </a>
+          <a
+            href="mailto:fresheggsmarket@gmail.com"
+            className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center group"
+          >
+            <MapPinIcon className="w-8 h-8 text-[#FFC107] mx-auto mb-4 transform group-hover:scale-110 transition-transform" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Email Us
+            </h3>
+            <p className="text-lg text-gray-600">fresheggsmarket@gmail.com</p>
+          </a>
+          <a
+            href="https://www.instagram.com/fresheggsmarket"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center group"
+          >
+            <InstagramIcon className="w-8 h-8 text-[#FFC107] mx-auto mb-4 transform group-hover:scale-110 transition-transform" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Instagram
+            </h3>
+            <p className="text-lg text-gray-600">@fresheggsmarket</p>
+          </a>
+          <a
+            href="https://web.facebook.com/fresheggsmarket"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center group"
+          >
+            <FacebookIcon className="w-8 h-8 text-[#FFC107] mx-auto mb-4 transform group-hover:scale-110 transition-transform" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Facebook
+            </h3>
+            <p className="text-lg text-gray-600">Fresh Eggs Market</p>
+          </a>
+        </div>
+        {/* Location */}
+        <div className="text-center bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Visit Our Egg Depot
+          </h2>
+          <p className="text-xl text-gray-600 mb-6">
+            Spring Valley Estate, Alasia Busstop,
+            <br />
+            Before LBS, Lekki-Epe Expway, Lagos
+          </p>
+          <img
+            // src="https://uploadthingy.s3.us-west-1.amazonaws.com/r2owZDNq3PbnoduV3VD1pN/pasted-image.jpg"
+            src={depotImage}
+            alt="Fresh Eggs Market Store Location"
+            className="w-full rounded-xl shadow-md"
+          />
         </div>
       </div>
     </section>
