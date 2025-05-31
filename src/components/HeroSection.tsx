@@ -51,6 +51,7 @@ const HeroSection = () => {
               src={heroImage}
               alt="Fresh Eggs Market Promotional"
               className="w-full rounded-2xl shadow-lg transform hover:scale-[1.02] transition-transform duration-300"
+              // skeletonClassName="h-[400px] w-[400px] bg-gray-200 animate-pulse rounded"
             />
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
